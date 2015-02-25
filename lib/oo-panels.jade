@@ -1,0 +1,5 @@
+template(name="ooPanel")
+  div(oo-Panel="{{oo}}" oo-Color="{{ooColor}}" class="{{isOpen}}" id="{{id}}")
+    +Template.contentBlock
+  if backdrop
+    .ooPanel--Backdrop.js-closePanel

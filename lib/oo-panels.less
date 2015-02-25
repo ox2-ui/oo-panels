@@ -1,0 +1,138 @@
+[oo-Panel] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+
+  transform: translateZ(0);
+  transition-duration: 350ms;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); // easeOutQuad
+
+  &.is-open {
+    transition-duration: 400ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); // easeOutCubic
+    transform: translateX(0);
+  }
+}
+
+[oo-Panel~="slide-from:left"] {
+  transform: translateX(-100%);
+}
+
+[oo-Panel~="slide-from:right"] {
+  transform: translateX(100%);
+}
+
+[oo-Panel~="slide-from:bottom"] {
+  transform: translateY(100%);
+}
+
+[oo-Panel~="type:side-menu"] {
+  width: 93%;
+  max-width: 35rem;
+}
+
+[oo-Panel~="type:side-action"] {
+  width: 9rem;
+}
+
+[oo-Panel~="type:bottom-menu"] {
+  height: 43rem;
+  width: 100%;
+  max-width: 40rem;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+[oo-Panel~="type:views"] {
+  @media screen and (min-width: 768px) {
+    top: 64px;
+    left: 50%;
+  }
+}
+
+[oo-Panel~="duration:fast"] {
+  transition-duration: 300ms;
+
+  &.is-open {
+    transition-duration: 350ms;
+  }
+}
+
+[oo-Panel~="open:easeOutQuint"] {
+  &.is-open {
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); // easeOutQuint
+  }
+}
+
+[oo-Panel~="open:easeInOutBack"] {
+  &.is-open {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); // easeInOutBack
+  }
+}
+
+[oo-Panel~="push:top"] {
+  top: 20px;
+}
+
+[oo-Panel~="side:right"] {
+  left: auto;
+}
+
+[oo-Panel~="side:left"] {
+  right: auto;
+}
+
+[oo-Panel~="side:bottom-left"] {
+  top: auto;
+  right: auto;
+}
+
+[oo-Panel~="level:1"] {
+  z-index: 100;
+}
+
+[oo-Panel~="level:2"] {
+  z-index: 200;
+}
+
+[oo-Panel~="level:3"] {
+  z-index: 300;
+}
+
+.ooPanel--Backdrop {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background: rgba(94, 90, 89, 0.6);
+  transition: opacity 0.5s;
+  transform: translateX(100%);
+}
+
+[oo-Panel~="level:1"] + .ooPanel--Backdrop {
+  z-index: 90;
+}
+
+[oo-Panel~="level:2"] + .ooPanel--Backdrop {
+  z-index: 190;
+}
+
+[oo-Panel~="level:3"] + .ooPanel--Backdrop {
+  z-index: 290;
+}
+
+.is-open + .ooPanel--Backdrop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
