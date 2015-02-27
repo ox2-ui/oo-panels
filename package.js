@@ -12,6 +12,7 @@ var CS = [C, S];
 Package.onUse(function(api) {
   api.versionsFrom('1.0.2.1');
   api.export('ooPanelCallbacks');
+  api.export('ooPanelClose');
   // Core
   api.use([
     'templating'
