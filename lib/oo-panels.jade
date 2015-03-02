@@ -2,4 +2,4 @@ template(name="ooPanel")
   div(oo-Panel="{{oo}}" oo-Color="{{ooColor}}" class="{{isOpen}}" id="{{id}}")
     +Template.contentBlock
   if backdrop
-    .ooPanel--Backdrop.js-closePanel
+    .ooPanel--Backdrop.js-closePanel.no-drag.no-wheel

@@ -19,7 +19,7 @@ Package.onUse(function(api) {
     ]);
   // 3rd party
   api.use([
-    'lauricio:less-autoprefixer@1.0.7','mquandalle:jade@0.4.1'
+    'lauricio:less-autoprefixer@1.0.7','mquandalle:jade@0.4.1', 'ox2:detective@1.0.0'
     ]);
   api.addFiles('lib/oo-panels.jade', C);
   api.addFiles('lib/oo-panels.js', C);
