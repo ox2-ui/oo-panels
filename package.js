@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ox2:panels',
   summary: 'TESTING_DO_NOT_USE Sliding overlay panels',
-  version: '1.1.0',
+  version: '1.2.0',
   git: ' /* Fill me in! */ '
 });
 
