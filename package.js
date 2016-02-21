@@ -15,11 +15,12 @@ Package.onUse(function(api) {
   api.export('ooPanelClose');
   // Core
   api.use([
-    'templating'
+    'templating',
+    'less'
     ]);
   // 3rd party
   api.use([
-    'lauricio:less-autoprefixer@2.5.0_3','mquandalle:jade@0.4.1', 'ox2:detective@1.0.0'
+    'mquandalle:jade@0.4.9', 'ox2:detective@1.0.0'
     ]);
   api.addFiles('lib/oo-panels.jade', C);
   api.addFiles('lib/oo-panels.js', C);
