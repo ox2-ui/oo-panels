@@ -1,5 +1,5 @@
 template(name="ooPanel")
-  div(oo-Panel="{{oo}}" oo-Color="{{ooColor}}" class="{{isOpen}}" id="{{id}}")
+  div(oo-Panel="{{oo}}" oo-Color="{{ooColor}}" class="{{isOpen}}" id="{{id}}" style="{{style}}")
     +Template.contentBlock
   if backdrop
     .ooPanel--Backdrop.js-closePanel.no-drag.no-wheel
